@@ -53,3 +53,41 @@ let myObject = {
 const myFunction = function () {
     console.log("this is Animesh");
 }
+
+
+
+
+
+
+
+
+// ================MEMORIES==============
+
+// 2 type -- stack and heap
+    //Stack (Primitives) and heap (Non-Primitives)
+
+
+    //stack memory example : we get a copy , 
+let myName = "Animesh" 
+
+let anotherName = myName
+anotherName = "kakoty"
+
+console.log(myName);
+console.log(anotherName);
+
+
+
+//heap : here value changes inside the actual memory
+
+let userOne = {
+    email : "animeshkakoty33@gmai.com",
+    state : "assam",
+
+}
+
+let userTwo = userOne
+userTwo.email = "kakoty33@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
