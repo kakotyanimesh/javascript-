@@ -47,4 +47,11 @@ console.log(gameName.split('-'));  //spliting the gameName string at - separator
 //study string more
 
 
-console.log(`hellow my name is ${gameName} and my another string is ${newString}`);
+// a new syntext for printing anything in js :
+//                                        1. writes inside ``
+//                                        2. write dataypes inside ${}
+//                                        3. Done                                      
+
+
+
+console.log(`hellow my name is ${gameName} and my another string is ${newString}`);  
