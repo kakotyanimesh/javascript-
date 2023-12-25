@@ -1,0 +1,1 @@
+ctrl+shift+l : for selection more at once 
