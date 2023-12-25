@@ -8,7 +8,7 @@ console.log("2" > 0);  // always check the datatypes before comparision
 console.log("02" > 4);
 
 
-console.log(null > 0);  // conmfusion in the answer
+console.log(null > 0);  // confusion in the answer
 console.log(null == 0);
 console.log(null >= 0);
 
