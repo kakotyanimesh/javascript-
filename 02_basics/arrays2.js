@@ -48,3 +48,6 @@ let Score3 = 300
 
 let storeInArray = Array.of(Score1, Score2, Score3)  // so here we store it in array by using Array.of(x, y , z ....)
 console.log(storeInArray);
+
+// const set = new Set(["foo", "bar", "baz", "foo"]);
+// console.log(Array.from(set));
