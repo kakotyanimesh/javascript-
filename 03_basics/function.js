@@ -74,3 +74,57 @@ function isUserLoggedInthree(username = "kakoty") {
 }
 
 console.log(isUserLoggedInthree("animesh"));
+
+// lets study about function in shopping carty
+
+
+
+function addtOcart(...num) {
+    return num
+}
+
+console.log(addtOcart(200, 4999, 6999));   // it will return an array because we are using ... to add more items 
+
+
+// pass object to an function 
+
+const userNew = {
+    username2: "animesh",
+    age: 20
+}
+
+function handleObject(anyobject) {
+    return `username is ${anyobject.username2} and age is ${anyobject.age}`
+}
+
+console.log(handleObject(userNew));
+
+// we call function with syntax : name_of_functionn(the_callout-parameter)
+
+function handleObjectPttwo(anyobjecttwo) {
+    return `${anyobjecttwo.name} has fucked up his ${anyobjecttwo.year} year of his ${anyobjecttwo.totalyear} year college life`
+}
+
+console.log(
+    handleObjectPttwo({
+        name: "animesh",
+        year: 2.5,                            // giving values at last 
+        totalyear: 4
+    })
+    );
+                  
+
+
+
+
+// let's do the same thing with arrays 
+
+const myNewArray = [200, 300, 6969696, 5000]
+
+function handleArray(anyArray) {
+    return anyArray[3]
+}
+
+console.log(handleArray(myNewArray));
+
+console.log(handleArray([200, 300, 4000, 50000]));
