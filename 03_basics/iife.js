@@ -23,3 +23,9 @@
 ((name) => {
     console.log(`iife execution object ${name}`);
 })('anieh')
+
+
+
+
+
+
