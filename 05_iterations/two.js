@@ -23,3 +23,11 @@ do {
     console.log(`score is ${score}`);
     score++
 } while (score <=10);
+
+// in do while loop condition is checked in last 
+let scoreTwo = 11
+
+do {
+    console.log(`score is ${scoreTwo}`);
+    score++
+} while (scoreTwo <=10);
