@@ -42,7 +42,7 @@ if (userLoggedIn && debitCard) {
     console.log(`both condition should be corrected so use &&`);
 
 }
-if (loggedInViaEmail || loggedInViaGoogle) {
+if (loggedInViaEmail || loggedInViaGoogle) {           
     console.log(`only one statement is true so we use ||`);
     
 }
