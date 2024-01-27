@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animesh and Dom</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addLanguage('python')
+    addLanguage('type')
+    
+    // lets write with optimized way use apendchild 
+
+    function addOptilang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addOptilang('golang')
+
+    //edit 
+
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML = "ruby"
+    const newLi = document.createElement('li')
+    newLi.textContent = "ruby"
+    secondLang.replaceWith(newLi)
+
+    //edit 
+
+    const firstlang = document.querySelector('li:first-child')
+    firstlang.outerHTML = "<li>Typescript</li>"
+
+
+    //remove
+    const last = document.querySelector('li:last-child')
+    last.remove()
+
+
+
+</script>
+</html>
