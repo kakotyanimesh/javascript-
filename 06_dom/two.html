@@ -13,6 +13,7 @@
 </head>
 <body>
     <div class="parent">
+        <!-- this is comment -->
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednessday</div>
@@ -31,10 +32,24 @@
         
     // }
 
-    parent.children[1].style.color = "orange"
-    parent.children[1].style.padding = "25px"
-    console.log(parent.firstElementChild);
-    console.log(parent.lastElementChild);
+    // parent.children[1].style.color = "orange"
+    // parent.children[1].style.padding = "25px"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+    
+    // const dayone = document.querySelector(".day")
+    // console.log(dayone)
+    // console.log(dayone.parentElement.innerText);
+    // console.log(dayone.nextElementSibling.innerHTML);
+
+    console.log("nodes: ", parent.childNodes);         // behind the scene there are many nodes like enter is also counted as childNodes   // this is important 
+
+
+                                                        
+
+
+
+
 </script>
 </html>
 
