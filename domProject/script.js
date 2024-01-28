@@ -5,3 +5,6 @@ function populateDiv(){
     const sum = document.getElementById("finalSum")
     sum.innerHTML = parseInt(a) + parseInt(b)                             // parse int to convert to number and innerHTML to add text 
 }
+
+
+// 48.56
