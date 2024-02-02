@@ -1,0 +1,24 @@
+database : it allows access to 4 primitives 
+            1. create data
+            2. read data 
+            3. update data
+            4. delete data 
+                *{CRUD}*
+
+
+api for mongo library : mongoose 
+            
+            1: define a schema : but we know mongodb is scgemaless , its counter intuitive right ? 
+            mongoose makes u define schema for things like
+            * autocompletions/
+            * validating data before it  goes to mongodb database 
+
+
+
+
+inside databases::::
+        
+        1. cluster 
+        2. Database
+        3. table 
+        {check png}
