@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: black; color: wheat;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick=()=>{
+    //     alert("clicked in owl")
+
+    // }
+
+    // the above code to get alert isnot good enough lets try eventlistener
+    
+    // first simple function 
+    // document.getElementById('owl').addEventListener('click', function () {
+    //     alert('owl clicked')
+    // })
+
+    // now lets do with arrow function
+    // document.getElementById('owl').addEventListener('click',()=>{
+    //     alert('clicked in owl'),false
+    // })
+
+    // dont forget to use false/true when you are using add event listner => false is known as event bubling and true is known as event capturing
+    
+    // document.getElementById('owl').addEventListener('click', (e)=>{
+    //     console.log(e);
+
+
+    // }, false)
+
+    // read about e => aka event object 
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenY, screenX
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // discuss event bubling and event capturing 
+
+
+    // first is event bubling : 
+
+    // document.getElementById('images').addEventListener('click', (e)=>{
+    //     console.log('ul clicked');
+    // }, false)
+    // document.getElementById('owl').addEventListener('click', (e)=>{
+    //     console.log('owl clicked ');
+    //     e.stopPropagation()                              // stopPropogation is same as preventDefault 
+    // }, false)
+
+    // when i clicked in owl first print will be owl and then ul will print like a bubble 
+
+    // document.getElementById('images').addEventListener('click', (w)=> {
+    //     console.log('ul clicked')
+    // }, true)
+
+    // document.getElementById('owl').addEventListener('click', (e)=>{
+    //     console.log('owl clicked');
+    // }, true)
+
+    // as we are using true, firt it will print the ul and then it will print owl like capturing : first the big one and then small one 
+
+    // lets prevent from opening to google link 
+
+    // document.getElementById('google').addEventListener('click', (e)=> {
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('stopped google');
+    // })
+
+
+    // lets remove images when we click on them 
+
+    document.querySelector('#images').addEventListener('click', (e)=> {
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        // 
+        
+     //   let removeIt = e.target.parentNode
+        // // removeIt.parentNode.removeChild(removeIt)      we can use this also 
+        // removeIt.remove()
+        
+    })
+
+    
+</script>
+</html>
