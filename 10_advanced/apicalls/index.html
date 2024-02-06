@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api calls </title>
+</head>
+<body style="background-color: #212121;">
+    <div style="background-color: #0b052f; color: rgb(237, 237, 237);">
+        <table>
+            <tr>
+            <th>value</th>
+            <th>state</th>
+            <th>description</th>
+            
+        </tr>
+            <tr>
+                <td>0</td>
+                <td>insert</td>
+                <td> client has been created but not called yet</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>opened</td>
+                <td>open () has been called</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>headers received</td>
+                <td>downloading responseText holds partial data</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>loading</td>
+                <td>downloading responseText holds partial data</td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>done</td>
+                <td>the operation is completed</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState);
+        
+    }
+</script>
+</html>
