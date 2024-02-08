@@ -72,3 +72,52 @@ console.log(err);
 })
 
 // 31.49
+
+
+const promiseFive = new Promise((resolve, reject)=>{
+    setTimeout(() => {
+        let error = true
+        if (!error) {
+            resolve({username : "javascript", password: "123"})
+            
+        } else {
+            reject('error: js went wrong')
+        }
+    }, 1000);
+})
+
+// we can use .then / async await 
+
+async function consumedPromiseFive() {
+    try {
+        const respinse = await promiseFive
+    console.log(respinse);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+consumedPromiseFive()
+
+
+// async function getAllusers() {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data = await response.json()
+//         console.log(data);
+//         // console.log(response);
+//     } catch (error) {
+//         console.log('E: ', error);
+//     }
+// }
+
+// getAllusers()
+
+
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+ return response.json()
+})
+.then((data) => console.log(data))
+.catch((err)=> console.log(err))
