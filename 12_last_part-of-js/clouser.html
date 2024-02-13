@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animesh</title>
+</head>
+<body style="background-color: black;">
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    
+</body>
+<script>
+    function init() {
+        let name = "Mozilla"; 
+        function displayName() {
+            console.log(name);       // here we are getting the access of name and this is known as lexical scoping 
+
+    }
+  displayName();
+}
+init();
+
+function outer() {
+    let username = 'animeh'
+    // console.log('OUTER', secret);          // and here we cant get acess to secret
+    
+    function innerfunc() {
+        // let username = 'kakoty'
+        let secret = '123'
+        console.log("inner", username);                /// we are getting the acess to username => known as lexical scoping 
+        console.log("inner", secret);                
+
+    }
+    function innerTwo() { 
+        console.log('inner2', username);
+        // console.log('inner2', secret);         // but here we cant get the access to secret 
+                                                        // so it means we can get access from parent but the child wont share anything like in real life 
+    }
+    innerfunc()
+    innerTwo()
+}
+outer()
+console.log("too outer", username);    // here it gives error 
+
+// lets study clouser
+
+
+function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+const myFunc = makeFunc();
+myFunc();
+
+// when a whole function with its lexical scope is returing => known as clouser 
+
+
+
+
+
+
+
+</script>
+<script>
+    
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+
+    // document.getElementById('green').onclick = function () {
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+        // real world of lexical and closure : 
+    function clickHandeller(color) {
+
+        return function (){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandeller("orange")
+    document.getElementById('green').onclick = clickHandeller("green")
+</script>
+</html>
