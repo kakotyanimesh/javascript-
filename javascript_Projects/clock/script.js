@@ -1,4 +1,4 @@
-const endDate = "22 Feb 2024 2:12:40 AM"
+const endDate = "21 Feb 2024 2:12:40 AM"
 
 document.getElementById('date').innerHTML = endDate;
 
@@ -23,3 +23,5 @@ clockFunction()
 setInterval(() => {
     clockFunction()
 }, 1000);
+
+
