@@ -24,3 +24,27 @@ document.getElementById("buttonTwo").addEventListener('click', ()=>{
     imgOne.src = src2
     imgTwo.src = src1
 })
+
+
+// js for third prject 
+
+const form = document.querySelector("form")
+const inputs = document.querySelectorAll('input[type = "text"]')
+
+form.addEventListener("submit", (e)=> {
+    e.preventDefault()                // we are preventing the default behaviour of form => stopping from reloading 
+    let isEmpty = false;
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value.trim() === '') {           // inputs[i].value is used to get from user and trim() to prevent spaces and '' means blank space 
+            let isEmpty = true;
+
+            alert('dont submit blank space')
+            break
+        } 
+    }
+    if (!isEmpty) {
+        alert('form sbmitted')             // form submitted is outside the for loop so that multiple alert dont occure
+    }
+
+
+})
