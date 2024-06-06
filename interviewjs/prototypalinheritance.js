@@ -129,22 +129,83 @@
 // apply: immediately invoked the function with specified this but arguments should be passed in ARRAY : A: ARRAY
 
 // bind : return a new function when called has its this value set to provide value 
-const person = {
-    name: "animesh", 
-    age: 20
+// const person = {
+//     name: "animesh", 
+//     age: 20
 
+// }
+
+// function introduce(interest, hobby) {
+//     console.log(`My name is ${this.name} and age ${this.age} and i like ${interest} and ${hobby}`);
+// }
+
+// introduce.call(person, "cricket", "maths")
+// // we just have to pass the parameters
+
+// introduce.apply(person,["cricket", "math"])
+// // we have to pass the parameters inside array
+
+// const boundIntroduec = introduce.bind(person, "cricket")
+// // bind returns a new function as it is 
+// boundIntroduec("maths")
+
+
+
+
+// async await 
+
+// async function fetchedData() {
+//     try {
+//         const response = await fetch("https://api.api-ninjas.com/v1/jokes?limit=")
+//         const data = await response.json()
+//         console.log(data);
+//     } catch (error) {
+//         console.log(error);
+        
+//     }
+// }
+
+
+// fetchedData()
+// .then(()=> console.log("data fetched"))
+// .catch(err => console.log(err))
+
+
+// function Person(name, age) {
+//     this.name = name,
+//     this.age = age 
+
+// }
+
+// const person = new Person("animesh", 21)
+
+// console.log(person);
+
+
+// function outerFn() {
+//     const outervariable = "clouser "
+
+//     function innerfn(){
+//         console.log(outervariable);
+
+//     }
+//     return innerfn()
+
+// }
+
+// const closure = outerFn()
+
+// divideBy10(100)
+// function divideBy10(x) {
+//     console.log(x/10);
+    
+// }
+
+
+function add(x) {
+    return (y) => x + y
+    
 }
 
-function introduce(interest, hobby) {
-    console.log(`My name is ${this.name} and age ${this.age} and i like ${interest} and ${hobby}`);
-}
-
-introduce.call(person, "cricket", "maths")
-// we just have to pass the parameters
-
-introduce.apply(person,["cricket", "math"])
-// we have to pass the parameters inside array
-
-const boundIntroduec = introduce.bind(person, "cricket")
-// bind returns a new function as it is 
-boundIntroduec("maths")
+const addtwo = add(2)
+console.log(addtwo(3));
