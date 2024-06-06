@@ -202,10 +202,26 @@
 // }
 
 
-function add(x) {
-    return (y) => x + y
+// function add(x) {
+//     return (y) => x + y
     
-}
+// }
 
-const addtwo = add(2)
-console.log(addtwo(3));
+// const addtwo = add(2)
+// console.log(addtwo(3));
+
+
+// ifee
+
+(function() {
+    // Private variables and functions
+    const name = 'John';
+    function sayHello() {
+      console.log('Hello, ' + name + '!');
+    }
+  
+    // Public functions
+    function greet() {
+      console.log('Hello, world!');
+    }
+  })();
